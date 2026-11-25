@@ -1,26 +1,32 @@
+/* Pulls in all of Tailwind's utility classes (flex, p-4, text-lg, ...) */
 @import "tailwindcss";
 
+/* Our design tokens: one place to change colours for the whole site */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #0b0d10;
+  --foreground: #e6e8eb;
+  --muted: #8b939c;
+  --accent: #4ade80;
 }
 
+/* Expose the tokens to Tailwind, so we can write `bg-background`,
+   `text-muted`, `text-accent`, `font-mono`, etc. */
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Clicking "See my work" glides down instead of jumping */
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), system-ui, sans-serif;
 }
