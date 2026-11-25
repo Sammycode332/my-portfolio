@@ -34,7 +34,7 @@ export const projects: Project[] = [
     tagline: "AI voice tutoring platform",
     description:
       "An AI voice tutor that teaches students through spoken conversation. Built with a team; I built its AI prompt logic and data model.",
-    stack: ["TODO"],
+    stack: ["Next.js", "TypeScript", "Supabase", "Vapi", "Clerk"],
     highlight: "Top 5 - Nigeria SDG Hackathon 2025",
     live: "https://edison-learn.vercel.app",
     image: "/projects/edison.webp",
